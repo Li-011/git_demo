@@ -1,0 +1,67 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{ctex}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\geometry{margin=1in}
+
+% 元信息
+\title{academic-forum-visual-materials-skill \\ 学院学术论坛视觉物料助手}
+\author{xyu}
+\date{版本 v1.0.0，2026-09-20}
+
+\begin{document}
+	\maketitle
+	
+	\section{概述}
+	本Skill用于为学院学术论坛成套制作视觉物料。输入论坛brief、文案、讲者名单、湖南大学设计艺术学院logo、二维码，输出主视觉海报、议程页、胸牌、导视牌。
+	交付过程包含4项人工门禁审核，保障内容准确、品牌规范、印刷可用。许可证：MIT。
+	
+	\section{触发指令}
+	用户可使用以下指令启动：
+	\begin{verbatim}
+		/academic-forum-visual-materials 根据这些 brief、名单、院徽和二维码制作全套论坛物料
+		/academic-forum-visual-materials 先整理论坛资料并给我 3 个视觉方向
+		/academic-forum-visual-materials 基于已冻结的设计规范派生 A3 海报、A4 议程、胸牌和导视牌
+	\end{verbatim}
+	
+	\section{固定约束}
+	\begin{itemize}
+		\item 气质：学术、严谨
+		\item 主色：\texttt{\#9E72FF}；辅色：\texttt{\#C7FF5F}
+		\item 中文字体：PingFang SC；跨平台需声明替代方案，不可静默替换
+		\item 物料必须包含湖南大学设计艺术学院官方logo，不可拉伸、重绘、改色
+		\item 禁止猜测姓名、职务、时间地点、议题、二维码目标等事实信息
+	\end{itemize}
+	
+	\section{四个人工门禁（必须人工确认，不自动放行）}
+	\begin{enumerate}
+		\item \textbf{内容事实核对：}名册、议程、场地、日期校验
+		\item \textbf{视觉方向选择：}提供3套差异化视觉方案
+		\item \textbf{设计系统冻结：}锁定色彩、字号、栅格、logo规范
+		\item \textbf{终稿审核：}事实+视觉+印刷技术综合检查
+	\end{enumerate}
+	
+	\section{输出物料规格}
+	\begin{itemize}
+		\item 主视觉海报：A3竖版，297×420 mm
+		\item 议程页：A4竖版，210×297 mm
+		\item 胸牌：90×120 mm，默认竖版
+		\item 导视牌：A3横版，420×297 mm
+	\end{itemize}
+	交付顺序：可编辑源文件 → 印刷PDF → 预览PNG。
+	
+	\section{质检与交付}
+	逐项校验尺寸、出血、色彩、字体、信息一致性、logo安全边距、二维码扫码可用性。
+	输出交付清单 \texttt{delivery-manifest.md}，记录版本、文件信息、审核状态。
+	任意门禁未通过，交付标记为\textbf{未完成}，不作为终稿。
+	
+	\section{注意事项（Gotchas）}
+	\begin{itemize}
+		\item PingFang SC仅Apple环境可用；其他系统需要确认替代字体
+		\item 成品尺寸不含出血，出血参数以承印方要求为准
+		\item 二维码必须实际扫码测试
+		\item 院徽必须使用用户提供的原始文件，不可网上抓取重建
+	\end{itemize}
+	
+\end{document}
